@@ -42,7 +42,8 @@ init_db()
 
 def create_app():
     app = Flask(__name__)
-    app.config["JWT_SECRET_KEY"] = "my_dirty_little_secret" # All American Rejects :)
+    app.config["JWT_SECRET_KEY"] = "my_dirty_little_secret"
+    CORS(app)  
 
     # Register blueprints
     app.register_blueprint(nba_player_bp)
