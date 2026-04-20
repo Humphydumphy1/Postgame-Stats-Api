@@ -44,8 +44,6 @@ def create_app():
     app = Flask(__name__)
     app.config["JWT_SECRET_KEY"] = "my_dirty_little_secret"
     CORS(app)  
-
-    # Register blueprints
     app.register_blueprint(nba_player_bp)
     app.register_blueprint(nba_team_bp)
     app.register_blueprint(auth_bp)
@@ -53,8 +51,7 @@ def create_app():
     app.register_blueprint(ncaa_mens_team_bp)
     app.register_blueprint(gleague_player_bp)
     app.register_blueprint(wnba_player_bp)
-    app.run(host="0.0.0.0", port=5000)
-    return app
+    return app  # ✅ just return, no app.run
 
 
 if __name__ == "__main__":
