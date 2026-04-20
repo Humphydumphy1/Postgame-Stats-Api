@@ -20,6 +20,7 @@ nfl_data_py
 # Flask
 flask
 flask-cors
+gunicorn
 
 # Authentication
 Flask>=2.0,<3.0
